@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "Norse-Bold";
+    src: url("Norse-Bold.otf");
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;         
+ }
+ body{
+    display: inline-flex;
+ }
+.background{
+    position: relative;
+    display: flex;
+    width:90%;
+    justify-content: center;
+    background-color: blue;
+}
+.background img{
+    object-fit: cover;
+    width: 100%;
+}
+.banner{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    top: 30%;
+    background-color: black;
+    opacity: 0.5;
+}
+.logo{
+    height: 90%
+}
+.logo img{
+    object-fit: cover;
+    height: 100%;
+}
+.logoText{
+
+    font-size: 100%;
+    color:white;
+    font-family: Norse-Bold, serif;
+}
