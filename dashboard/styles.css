@@ -6,6 +6,7 @@ html, body {
     background-color: whitesmoke;      
  }
 
+
  body{
     display: flex;
  }
@@ -14,15 +15,15 @@ main{
     display: flex;
     flex-direction: column;
     background-color: rgb(227, 233, 248);
-    width:100%;
     height:100vh;
+    flex:1;
 }
  .left{
     top:0;
     bottom:0;
-    width: 300px;
     background-color: rgb(75, 132, 255);
     z-index: 5;
+    flex:0 0 300px;
  }
  .header{
     background-color: rgb(255, 255, 255);
@@ -31,7 +32,7 @@ main{
     height: 200px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     z-index: 4;
-    flex:0 0 200ox;
+    flex:0 0 150px;
  }
 
 
@@ -92,21 +93,30 @@ main{
     display:flex;
     flex-direction: column;
 }
+.right .phead{
+    margin-left:1rem;
+}
 .gridcontainer2{
+    box-sizing: border-box;
     margin:2rem;
-    width: 80%;
+    margin-left: 1rem;
+    width: auto;
+    height:auto;
+    overflow: hidden;
     display: grid;
     grid-template-columns: repeat(1, minmax(50px, 1fr));
-    grid-auto-rows: minmax(50px, 10vh);
+    grid-auto-rows: minmax(30px, 10vh);
     gap: 0;       
     padding: 1rem;  
     padding-top:0;
     margin-top: 1rem;
-    overflow: scroll;  
-    height: 100%;
     background-color: whitesmoke;
     border-radius: 5px;
     box-shadow: 5px 4px 10px 3px rgba(0,0,0,0.3);
+    flex:1 1 0;
+}
+#first{
+    margin-bottom: 0;
 }
 .gridcontainer2 > div{
     padding:0;
@@ -122,6 +132,9 @@ main{
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .mcont{
     margin:0;
@@ -132,4 +145,12 @@ main{
     margin-top: 0.5rem;
 }
 
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    text-decoration-color: black;
+}
 
