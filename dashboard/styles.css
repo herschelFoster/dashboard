@@ -16,7 +16,7 @@ html, body {
 main{
     display: flex;
     flex-direction: column;
-    background-color: #dde3de; /* main color */
+    background-color: #f6f7fb; /* main color  was dde3de*/ 
     height:100vh;
     flex:1;
 }
