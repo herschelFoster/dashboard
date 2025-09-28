@@ -5,7 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   
+
+
+   <div id="viewportDisplay"></div>
+
+    <script>
+        const display = document.getElementById('viewportDisplay');
+
+        function logViewportWidth() {
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            display.textContent = `Width/Height: ${viewportWidth}px/${viewportHeight}px`;
+        }
+
+        // Log once on load
+        logViewportWidth();
+
+        // Log whenever the window is resized
+        window.addEventListener('resize', logViewportWidth);
+    </script>
+
+
 </head>
 <body>
     <div class="left"></div>
@@ -15,58 +35,66 @@
         </div>
 
         <div class="bodyitems">
-            <div>
-                <p class="phead" id="line">Your Projects</p>
-                <div class="gridcontainer">
-                    <div>a</div>
-                    <div>a</div>
-                    <div>a</div>
-                    <div>a</div>
-                    <div>a</div>
-                    <div>a</div>
-                    <div>a</div>
+            <div class="content-sections">
+                <div class="leftbody">
+                    <p class="phead">Your Projects</p>
+                    <div class="gridcontainer">
+                        <div>a</div>
+                        <div>a</div>
+                        <div>a</div>
+                        <div>a</div>
+                        <div>a</div>
+                        <div>a</div>
+                        <div>a</div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <p class="phead">Announcements</p>
+                    <div class="gridcontainer2" id="first">
+                        <div>
+                            <p class="minih">
+                            <a href="#">Site Maintenance</a>
+                            </p>
+                            <p class="mcont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+                        </div>
+                        <div>
+                            <p class="minih">
+                            <a href="#">Community Share Day</a>
+                            </p>
+                            <p class="mcont">Sed eget ligula ac orci ullamcorper congue quis ut diam.</p>
+                        </div>
+                        <div>
+                            <p class="minih">
+                            <a href="#">Updated Privacy Policy</a>
+                            </p>
+                            <p class="mcont">Nulla et velit pellentesque, fermentum elit sit amet, pharetra eros. </p>
+                        </div>
+                    </div>
+                    <p class="phead">Trending</p>
+                    <div class="gridcontainer2">
+                        <div>
+                            <p class="minih">Site Maintenance</p>
+                            <p class="mcont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e</p>
+                        </div>
+                        <div>
+                            <p class="minih">Community Share Day</p>
+                            <p class="mcont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e</p>
+                        </div>
+                        <div>
+                            <p class="minih">Updated Privacy policy</p>
+                            <p class="mcont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="right">
-                <p class="phead">Announcements</p>
-                <div class="gridcontainer2" id="first">
-                    <div class="g">
-                        <a href="#">
-                        <p class="minih">Site Maintenance</p>
-                        </a>
-                        <p class="mcont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e</p>
-
-                    </div>
-                    <div class="g">
-                        <a href="#">
-                        <p class="minih">Community Share Day</p>
-                        </a>
-                        <p class="mcont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e</p>
-                    </div>
-                    <div>
-                        <a href="#">
-                        <p class="minih">Updated Privacy policy</p>
-                        </a>
-                        <p class="mcont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e</p>
-                    </div>
-                </div>
-                <p class="phead">Trending</p>
-                <div class="gridcontainer2">
-                    <div class="g">
-                        <p class="minih">Site Maintenance</p>
-                        <p class="mcont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e</p>
-                    </div>
-                    <div class="g">
-                        <p class="minih">Community Share Day</p>
-                        <p class="mcont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e</p>
-                    </div>
-                    <div>
-                        <p class="minih">Updated Privacy policy</p>
-                        <p class="mcont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e</p>
-                    </div>
-                </div>
-            </div>
+            <p class="selfcred">
+                Created by
+                <a href="#"> Herschel Foster</a>
+                for
+                <a href="https://www.theodinproject.com/dashboard"> The Odin Project</a>
+            </p>
         </div>
     </main>
 </body>
