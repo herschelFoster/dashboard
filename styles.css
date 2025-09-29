@@ -12,10 +12,77 @@ html, body {
 
  body{
     display: flex;
- }
+}
  p{
-    font-family: Arial, Tahoma, sans-serif;
+    font-family: Arial, Tahoma, sans-serif; 
+}
+
+.left{
+    top:0;
+    bottom:0;
+    background-color: #1a211e; /* left color */
+    z-index: 5;
+    flex:0 0 200px; /* was 300px */
+    color:white;
+
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    overflow-y:hidden;
+    padding:2rem;
+    padding-top:3rem;
  }
+.sitename{
+    display:flex;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.sitename img{
+    height:80px;
+    width:60px;
+    object-fit:contain;
+}
+.sitename p{
+    width:auto;
+    font-size: 60px;
+    font-family: Norse-Bold, Arial;
+    transform: translateY(10%);
+}
+.sitename a{
+    height:60px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.sitename a:hover{
+    text-decoration: none;
+    opacity: 1;
+}
+.break{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 2vh;
+}
+.belowbreak{
+    padding-top: 1vh;
+}
+.leftelement{
+    color:rgba(255, 255, 255, 0.705);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    width:100%;
+}
+.leftelement > a{
+    width:100%;
+}
+.leftelement > a:hover{
+    text-decoration: none;
+}
+
+
+
+
 
 main{
     display: flex;
@@ -24,14 +91,6 @@ main{
     height:100vh;
     flex:1;
 }
- .left{
-    top:0;
-    bottom:0;
-    background-color: #1a211e; /* left color */
-    z-index: 5;
-    flex:0 0 200px; /* was 300px */
- }
-
 .topblur{
     background-color: #f6f7fbbe;
     backdrop-filter: blur(1px);
@@ -90,9 +149,7 @@ main{
 .account p{
     margin-left: 1rem;
     width:auto;
-    font-size: 36px;
-    font-family: Norse-Bold, Arial;
-    transform: translateY(10%);
+    font-size: 20px;
 }
 .account a:hover{
     text-decoration: none;
@@ -215,7 +272,7 @@ main{
     transform: scale(1.02);
     box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
 }
-.gridcontainer > div > img{
+.gridcontainer > div > img:first-child{
     flex: 0 0 180px;
     margin-bottom: 1rem;
     width: auto;
@@ -224,6 +281,21 @@ main{
     object-fit: cover;
 
     background-image: linear-gradient(rgb(98, 229, 255), rgb(97, 255, 126));
+}
+.gridcontainer>div>div{
+    flex:1;
+}
+.gridcontainer> div> a{
+    align-self: flex-end;
+    flex: 0 0 30px;
+    display:flex;
+    align-items: center;
+    width:30px;
+}
+.gridcontainer > div > a > img {
+    flex: 0 0 30px;
+    width:30px;
+    right:0;
 }
 .phead{
     font-size: 20px;
@@ -325,19 +397,3 @@ a:hover{
     text-decoration: underline;
 }
 
-
-
-
-
-#viewportDisplay {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    font-size: 14px;
-    padding: 6px 10px;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-    z-index: 9999;
-}
